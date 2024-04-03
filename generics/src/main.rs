@@ -56,7 +56,7 @@ fn largest(v: &Vec<i32>) -> i32 {
     max_num
 }
 
-fn largest_for_all<T: std::cmp::PartialOrd>(v: &[T]) -> &T {
+fn largest_for_all<T: std::cmp::PartialOrd>(v: &[T]) -> &T { //Here we used trait bound syntax, allowed this method to only types that implement PartialOrder
     let mut largest = &v[0];
     for i in v {
         if i > largest {
